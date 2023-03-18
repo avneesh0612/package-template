@@ -13,9 +13,10 @@
   },
   "scripts": {
     "build": "rm -rf dist/ && npm run format && npm run lint && tsup src/ --format esm,cjs --dts",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,css,md}' --config ./.prettierrc",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepublishOnly": "npm run build",
     "watch": "tsup src/ --watch --format esm,cjs --dts"
   },

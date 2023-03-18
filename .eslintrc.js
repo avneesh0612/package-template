@@ -11,7 +11,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
-    'next/core-web-vitals',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -49,21 +48,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/href-no-hash': [0],
     'react/display-name': 0,
-    'react/no-deprecated': 'error',
-    'react/no-unsafe': [
-      'error',
-      {
-        checkAliases: true,
-      },
-    ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 0,
-    'react/jsx-sort-props': [
-      'error',
-      {
-        ignoreCase: true,
-      },
-    ],
     'prettier/prettier': ['error', prettierConfig],
   },
   settings: {
