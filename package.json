@@ -7,13 +7,17 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avneesh0612/package-template"
+  },
   "scripts": {
     "build": "rm -rf dist/ && npm run format && npm run lint && tsup src/ --format esm,cjs --dts",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier --write 'src/**/*.{ts,tsx,css,md}' --config ./.prettierrc",
     "prepublishOnly": "npm run build",
-    "localPub": "npm run build && rm ./*.tgz && npm pack && cd example/ && npm run getSonic && cd .."
+    "watch": "tsup src/ --watch --format esm,cjs --dts"
   },
   "exports": {
     ".": {
